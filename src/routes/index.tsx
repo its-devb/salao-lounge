@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WA = "https://wa.me/5521999999999";
+const WA = "https://wa.me/5521985977277";
 
 const NAV = [
   { href: "#qualidades", label: "Qualidades" },
