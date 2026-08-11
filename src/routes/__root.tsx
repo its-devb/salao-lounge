@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Espaço Cascadura — Salão de Festas" },
+      { title: "Espaço Lounge — Salão de Festas" },
       {
         name: "description",
         content:
           "Salão de festas em Cascadura, Rio de Janeiro. Espaço amplo, som e iluminação inclusos e equipe própria.",
       },
-      { name: "author", content: "Espaço Cascadura" },
-      { property: "og:title", content: "Espaço Cascadura — Salão de Festas" },
+      { name: "author", content: "Espaço Lounge" },
+      { property: "og:title", content: "Espaço Lounge — Salão de Festas" },
       {
         property: "og:description",
         content: "Salão de festas em Cascadura, RJ. Estrutura completa para a sua comemoração.",
