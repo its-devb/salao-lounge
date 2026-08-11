@@ -1,4 +1,3 @@
-console.log("brasao:", brasao);
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import brasao from "@/assets/brasao.png";
@@ -188,11 +187,7 @@ function Index() {
           <a href="#top" className="flex items-center gap-2.5 font-display text-lg font-semibold">
             <img
               src={brasao}
-<<<<<<< HEAD
-              alt="Brasão do Espaço Cascadura"
-=======
               alt="Brasão do Espaço Lounge"
->>>>>>> 866e7bf73ee4554de1b25d460597287b19e6f397
               className="size-9 rounded-full object-cover ring-1 ring-primary/60"
             />
             Espaço Lounge
@@ -262,7 +257,7 @@ function Index() {
                 className="size-1.5 rounded-full bg-primary"
                 style={{ animation: "pulse-dot 2s ease-in-out infinite" }}
               />
-              Salão de festas · Cascadura, Rio de Janeiro
+              Espaço Lounge · Cascadura, Rio de Janeiro
             </span>
             <h1 className="mb-6 max-w-[15ch] text-[clamp(2.6rem,6vw,5.1rem)] leading-[1.03]">
               Um espaço em branco{" "}
@@ -315,11 +310,7 @@ function Index() {
               <div className="overflow-hidden rounded-lg border-[3px] border-double border-primary/60 bg-background p-2">
                 <img
                   src={brasao}
-<<<<<<< HEAD
-                  alt="Brasão do Espaço Cascadura — monograma E com coroa"
-=======
                   alt="Brasão do Espaço Lounge — monograma E com coroa"
->>>>>>> 866e7bf73ee4554de1b25d460597287b19e6f397
                   className="w-full rounded transition-transform duration-700 group-hover:scale-[1.04]"
                 />
               </div>
@@ -450,7 +441,7 @@ function Index() {
                 >
                   <div className="mb-3.5 tracking-[2px] text-primary">★★★★★</div>
                   <p className="mb-4 text-[0.95rem] leading-relaxed text-muted-foreground">
-                    “{d.q}”
+                    "{d.q}"
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="flex size-10 items-center justify-center rounded-full bg-gold-gradient text-[0.85rem] font-bold text-primary-foreground">
@@ -538,11 +529,7 @@ function Index() {
         <div className="mx-auto max-w-[1160px] px-6 md:px-8">
           <div className="flex flex-wrap justify-between gap-10 border-b border-border pb-10">
             <div>
-<<<<<<< HEAD
-              <div className="mb-2.5 font-display text-xl">Espaço Lounge </div>
-=======
               <div className="mb-2.5 font-display text-xl">Espaço Lounge</div>
->>>>>>> 866e7bf73ee4554de1b25d460597287b19e6f397
               <p className="max-w-[26ch] text-[0.9rem] text-muted-foreground">
                 Salão de festas em Cascadura, pronto pra qualquer comemoração.
               </p>
