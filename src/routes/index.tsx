@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import brasao from "@/assets/brasao loung.jpg.asset.json";
+import brasao from "@/assets/brasao.png";
 import { useReveal } from "@/components/site/useReveal";
 import {
   ArrowUpIcon,
