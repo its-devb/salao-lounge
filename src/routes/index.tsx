@@ -1,3 +1,4 @@
+console.log("brasao:", brasao);
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import brasao from "@/assets/brasao.png";
