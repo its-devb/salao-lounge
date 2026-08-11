@@ -187,10 +187,10 @@ function Index() {
           <a href="#top" className="flex items-center gap-2.5 font-display text-lg font-semibold">
             <img
               src={brasao.url}
-              alt="Brasão do Espaço Cascadura"
+              alt="Brasão do Espaço Lounge"
               className="size-9 rounded-full object-cover ring-1 ring-primary/60"
             />
-            Espaço Cascadura
+            Espaço Lounge
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             {NAV.map((l) => (
@@ -265,7 +265,7 @@ function Index() {
             </h1>
             <p className="mb-10 max-w-[44ch] text-lg leading-relaxed text-muted-foreground">
               Paredes brancas, estrutura completa e liberdade total pra decorar do seu jeito.
-              Aniversário, casamento, formatura, chá revelação — o Espaço Cascadura vira a sua festa
+              Aniversário, casamento, formatura, chá revelação — o Espaço Lounge vira a sua festa
               em qualquer paleta que você imaginar.
             </p>
             <div className="flex flex-wrap items-center gap-4">
@@ -310,12 +310,12 @@ function Index() {
               <div className="overflow-hidden rounded-lg border-[3px] border-double border-primary/60 bg-background p-2">
                 <img
                   src={brasao.url}
-                  alt="Brasão do Espaço Cascadura — monograma E com coroa"
+                  alt="Brasão do Espaço Lounge — monograma E com coroa"
                   className="w-full rounded transition-transform duration-700 group-hover:scale-[1.04]"
                 />
               </div>
               <p className="mt-4 text-center font-display text-[0.92rem] italic text-primary">
-                Espaço Cascadura
+                Espaço Lounge
               </p>
             </div>
             <div data-reveal className="reveal">
@@ -324,7 +324,7 @@ function Index() {
                 Um brasão, uma promessa de festa bem feita.
               </h2>
               <p className="mb-4 leading-relaxed text-muted-foreground">
-                A coroa e o monograma marcam cada detalhe do Espaço Cascadura — da fachada na Rua
+                A coroa e o monograma marcam cada detalhe do Espaço Lounge — da fachada na Rua
                 Miguel Rangel, 160 até a lembrança que fica depois da festa.
               </p>
               <p className="leading-relaxed text-muted-foreground">
@@ -425,7 +425,7 @@ function Index() {
             <div data-reveal className="reveal mb-12 max-w-[640px]">
               <Kicker>Quem já comemorou aqui</Kicker>
               <h2 className="text-[clamp(1.9rem,3.4vw,2.7rem)] leading-tight">
-                Depoimentos de quem fez a festa no Espaço Cascadura.
+                Depoimentos de quem fez a festa no Espaço Lounge.
               </h2>
             </div>
           </div>
@@ -529,7 +529,7 @@ function Index() {
         <div className="mx-auto max-w-[1160px] px-6 md:px-8">
           <div className="flex flex-wrap justify-between gap-10 border-b border-border pb-10">
             <div>
-              <div className="mb-2.5 font-display text-xl">Espaço Cascadura</div>
+              <div className="mb-2.5 font-display text-xl">Espaço Lounge</div>
               <p className="max-w-[26ch] text-[0.9rem] text-muted-foreground">
                 Salão de festas em Cascadura, pronto pra qualquer comemoração.
               </p>
@@ -564,7 +564,7 @@ function Index() {
             </div>
           </div>
           <div className="flex flex-wrap justify-between gap-2.5 pt-6 text-[0.8rem] text-muted-foreground/70">
-            <span>© 2026 Espaço Cascadura</span>
+            <span>© 2026 Espaço Lounge</span>
             <span>Feito com carinho pra sua festa</span>
           </div>
         </div>
