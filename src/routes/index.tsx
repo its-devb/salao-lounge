@@ -186,7 +186,7 @@ function Index() {
         <div className="mx-auto flex max-w-[1160px] items-center justify-between px-6 md:px-8">
           <a href="#top" className="flex items-center gap-2.5 font-display text-lg font-semibold">
             <img
-              src={brasao.url}
+              src={brasao}
               alt="Brasão do Espaço Lounge"
               className="size-9 rounded-full object-cover ring-1 ring-primary/60"
             />
@@ -309,7 +309,7 @@ function Index() {
               </span>
               <div className="overflow-hidden rounded-lg border-[3px] border-double border-primary/60 bg-background p-2">
                 <img
-                  src={brasao.url}
+                  src={brasao}
                   alt="Brasão do Espaço Lounge — monograma E com coroa"
                   className="w-full rounded transition-transform duration-700 group-hover:scale-[1.04]"
                 />
