@@ -97,7 +97,7 @@ const CONFETTI = ["#c9a961", "#e6e2d8", "#8c2f52", "#8a6a2f"];
 
 function Confetti() {
   const [bits, setBits] = useState<Array<Record<string, string>>>([]);
-  useEffect(() => {
+  useEffect(() => {                                    // <- COMEÇA AQUI
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setBits(
       Array.from({ length: 24 }, (_, i) => ({
@@ -108,7 +108,7 @@ function Confetti() {
         borderRadius: Math.random() > 0.5 ? "50%" : "2px",
       })),
     );
-  }, []);
+  }, []);                                               
   return (
     <div className="pointer-events-none absolute inset-0 z-10" aria-hidden="true">
       {bits.map((s, i) => (
@@ -242,7 +242,7 @@ function Index() {
 
       <main id="top">
         {/* HERO */}
-        <section className="relative flex min-h-screen items-center overflow-hidden pt-32">
+        <section className="relative flex min-h-[100dvh] items-center overflow-hidden pt-32">
           <div
             className="pointer-events-none absolute inset-0"
             style={{
@@ -354,7 +354,7 @@ function Index() {
                   data-reveal
                   className="reveal group rounded-[22px] border border-border bg-card p-9 transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-elegant"
                 >
-                  <div className="mb-5 flex size-13 items-center justify-center rounded-2xl bg-gold-gradient p-3.5 text-primary-foreground shadow-gold transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-105">
+                 <div className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-gold-gradient p-3.5 text-primary-foreground shadow-gold transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-105">
                     <Icon className="size-6" />
                   </div>
                   <h3 className="mb-2.5 text-lg">{title}</h3>
