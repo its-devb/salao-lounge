@@ -279,7 +279,6 @@ function Index() {
             </div>
           </div>
           <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[0.72rem] uppercase tracking-[0.12em] text-muted-foreground">
-            <span>role</span>
             <span
               className="h-8 w-px bg-gradient-to-b from-primary to-transparent"
               style={{ animation: "scroll-line 2s ease-in-out infinite" }}
