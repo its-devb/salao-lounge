@@ -174,7 +174,7 @@ function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="hero-screen bg-background">
       {/* NAV */}
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
