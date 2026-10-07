@@ -179,7 +179,7 @@ function Index() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "border-b border-border bg-background/75 py-3.5 backdrop-blur-xl"
+            ? "border-b border-border bg-background/75 py-3.5 nav-glass-xl"
             : "py-6"
         }`}
       >
@@ -252,7 +252,7 @@ function Index() {
           />
           <Confetti />
           <div className="relative z-20 mx-auto w-full max-w-[1160px] px-6 md:px-8">
-            <span className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-primary/35 bg-card/60 px-4 py-2 text-[0.78rem] font-bold uppercase tracking-[0.14em] text-primary backdrop-blur">
+            <span className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-primary/35 bg-card/60 px-4 py-2 text-[0.78rem] font-bold uppercase tracking-[0.14em] text-primary nav-glass">
               <span
                 className="size-1.5 rounded-full bg-primary"
                 style={{ animation: "pulse-dot 2s ease-in-out infinite" }}
