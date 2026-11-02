@@ -14,10 +14,28 @@ import {
 } from "@/components/site/icons";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Espaço Lounge | Salão de festas em Cascadura, Rio de Janeiro" },
+      {
+        name: "description",
+        content:
+          "Salão de festas em Cascadura com paredes brancas, som e iluminação inclusos e equipe própria. Aniversário, casamento, formatura e chá revelação. Chame no WhatsApp.",
+      },
+      { property: "og:title", content: "Espaço Lounge | Salão de festas em Cascadura" },
+      {
+        property: "og:description",
+        content:
+          "Um espaço em branco pronto pra sua festa colorir. Espaço amplo para até 120 convidados.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
+    ],
+  }),
   component: Index,
 });
 
-const WA = "https://wa.me/5521982090453";
+const WA = "https://wa.me/5521985977277";
 
 const NAV = [
   { href: "#qualidades", label: "Qualidades" },
@@ -30,7 +48,7 @@ const QUALIDADES = [
   {
     Icon: HallIcon,
     title: "Espaço amplo",
-    text: "Conforto para até 200 convidados, com boa circulação entre a pista e as mesas.",
+    text: "Conforto para até 120 convidados, com boa circulação entre a pista e as mesas.",
   },
   {
     Icon: WallIcon,
@@ -74,7 +92,7 @@ const DEPOIMENTOS = [
   {
     n: "Carlos A.",
     t: "Casamento",
-    q: "Contratamos o som e a iluminação do próprio salão e economizamos bastante. Ficou exatamente como a gente queria.",
+    q: "Usamos o som e a iluminação do próprio salão e economizamos bastante. Ficou exatamente como a gente queria.",
   },
   {
     n: "Juliana P.",
@@ -97,7 +115,7 @@ const CONFETTI = ["#c9a961", "#e6e2d8", "#8c2f52", "#8a6a2f"];
 
 function Confetti() {
   const [bits, setBits] = useState<Array<Record<string, string>>>([]);
-  useEffect(() => {                                    // <- COMEÇA AQUI
+  useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     setBits(
       Array.from({ length: 24 }, (_, i) => ({
@@ -108,7 +126,7 @@ function Confetti() {
         borderRadius: Math.random() > 0.5 ? "50%" : "2px",
       })),
     );
-  }, []);                                               
+  }, []);
   return (
     <div className="pointer-events-none absolute inset-0 z-10" aria-hidden="true">
       {bits.map((s, i) => (
@@ -174,12 +192,12 @@ function Index() {
   }, []);
 
   return (
-    <div className="hero-screen bg-background">
+    <div className="min-h-screen bg-background">
       {/* NAV */}
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "border-b border-border bg-background/75 py-3.5 nav-glass-xl"
+            ? "border-b border-border bg-background/75 py-3.5 backdrop-blur-xl"
             : "py-6"
         }`}
       >
@@ -187,7 +205,7 @@ function Index() {
           <a href="#top" className="flex items-center gap-2.5 font-display text-lg font-semibold">
             <img
               src={brasao}
-              alt="Brasão do Espaço Lounge"
+              alt=""
               className="size-9 rounded-full object-cover ring-1 ring-primary/60"
             />
             Espaço Lounge
@@ -213,6 +231,8 @@ function Index() {
           </nav>
           <button
             aria-label="Abrir menu"
+            aria-expanded={menuOpen}
+            aria-controls="menu-mobile"
             onClick={() => setMenuOpen((v) => !v)}
             className="flex flex-col gap-1.5 p-1.5 md:hidden"
           >
@@ -222,7 +242,10 @@ function Index() {
           </button>
         </div>
         {menuOpen && (
-          <nav className="mx-6 mt-3 flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-elegant md:hidden">
+          <nav
+            id="menu-mobile"
+            className="mx-6 mt-3 flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-elegant md:hidden"
+          >
             {NAV.map((l) => (
               <a
                 key={l.href}
@@ -242,7 +265,7 @@ function Index() {
 
       <main id="top">
         {/* HERO */}
-        <section className="relative flex min-h-[100dvh] items-center overflow-hidden pt-32">
+        <section className="relative flex min-h-svh items-center overflow-hidden pt-32">
           <div
             className="pointer-events-none absolute inset-0"
             style={{
@@ -252,7 +275,7 @@ function Index() {
           />
           <Confetti />
           <div className="relative z-20 mx-auto w-full max-w-[1160px] px-6 md:px-8">
-            <span className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-primary/35 bg-card/60 px-4 py-2 text-[0.78rem] font-bold uppercase tracking-[0.14em] text-primary nav-glass">
+            <span className="mb-7 inline-flex items-center gap-2.5 rounded-full border border-primary/35 bg-card/60 px-4 py-2 text-[0.78rem] font-bold uppercase tracking-[0.14em] text-primary backdrop-blur">
               <span
                 className="size-1.5 rounded-full bg-primary"
                 style={{ animation: "pulse-dot 2s ease-in-out infinite" }}
@@ -278,7 +301,11 @@ function Index() {
               </Btn>
             </div>
           </div>
-          <div className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[0.72rem] uppercase tracking-[0.12em] text-muted-foreground">
+          <div
+            className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 text-[0.72rem] uppercase tracking-[0.12em] text-muted-foreground"
+            aria-hidden="true"
+          >
+            <span>role</span>
             <span
               className="h-8 w-px bg-gradient-to-b from-primary to-transparent"
               style={{ animation: "scroll-line 2s ease-in-out infinite" }}
@@ -353,7 +380,7 @@ function Index() {
                   data-reveal
                   className="reveal group rounded-[22px] border border-border bg-card p-9 transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-elegant"
                 >
-                 <div className="mb-5 flex size-14 items-center justify-center rounded-2xl bg-gold-gradient p-3.5 text-primary-foreground shadow-gold transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-105">
+                  <div className="mb-5 flex size-[3.25rem] items-center justify-center rounded-2xl bg-gold-gradient p-3.5 text-primary-foreground shadow-gold transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-105">
                     <Icon className="size-6" />
                   </div>
                   <h3 className="mb-2.5 text-lg">{title}</h3>
@@ -396,7 +423,7 @@ function Index() {
                 O branco é a base. A paleta é toda sua.
               </h2>
               <p className="text-muted-foreground">
-                Um pequeno gostinho das combinações que já vimos ganhar vida aqui dentro.
+                Um pequeno gostinho das combinações que ganham vida aqui dentro.
               </p>
             </div>
           </div>
@@ -407,7 +434,8 @@ function Index() {
             >
               {[...PALETAS, ...PALETAS].map((p, i) => (
                 <div
-                  key={i}
+                  key={`${p.name}-${i}`}
+                  aria-hidden={i >= PALETAS.length ? true : undefined}
                   className="flex h-[190px] w-[150px] shrink-0 items-end rounded-[18px] p-4 text-[0.78rem] font-bold text-foreground shadow-elegant ring-1 ring-border"
                   style={{ background: p.c }}
                 >
@@ -435,15 +463,25 @@ function Index() {
             >
               {[...DEPOIMENTOS, ...DEPOIMENTOS].map((d, i) => (
                 <div
-                  key={i}
+                  key={`${d.n}-${i}`}
+                  aria-hidden={i >= DEPOIMENTOS.length ? true : undefined}
                   className="w-[340px] shrink-0 rounded-[20px] border border-border bg-background p-8"
                 >
-                  <div className="mb-3.5 tracking-[2px] text-primary">★★★★★</div>
+                  <div
+                    className="mb-3.5 tracking-[2px] text-primary"
+                    role="img"
+                    aria-label="5 de 5 estrelas"
+                  >
+                    ★★★★★
+                  </div>
                   <p className="mb-4 text-[0.95rem] leading-relaxed text-muted-foreground">
                     "{d.q}"
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-full bg-gold-gradient text-[0.85rem] font-bold text-primary-foreground">
+                    <div
+                      className="flex size-10 items-center justify-center rounded-full bg-gold-gradient text-[0.85rem] font-bold text-primary-foreground"
+                      aria-hidden="true"
+                    >
                       {d.n.charAt(0)}
                     </div>
                     <div>
@@ -549,17 +587,15 @@ function Index() {
             </div>
             <div>
               <h4 className="mb-4 text-[0.82rem] uppercase tracking-[0.08em]">Navegue</h4>
-              {NAV.slice(0, 2)
-                .concat(NAV[3]!)
-                .map((l) => (
-                  <a
-                    key={l.href}
-                    href={l.href}
-                    className="mb-2.5 block text-[0.9rem] text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {l.label}
-                  </a>
-                ))}
+              {NAV.filter((l) => l.href !== "#depoimentos").map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="mb-2.5 block text-[0.9rem] text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {l.label}
+                </a>
+              ))}
             </div>
           </div>
           <div className="flex flex-wrap justify-between gap-2.5 pt-6 text-[0.8rem] text-muted-foreground/70">
@@ -583,6 +619,8 @@ function Index() {
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Voltar ao topo"
+        aria-hidden={!showTop}
+        tabIndex={showTop ? 0 : -1}
         className={`fixed bottom-24 right-6 z-50 flex size-11 items-center justify-center rounded-full border border-border bg-card text-foreground transition-all ${
           showTop ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
